@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101a27" />
+    <title>Squarcraft — Monde de cubes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="game-shell">
+      <canvas id="game" aria-label="Monde 3D Squarcraft"></canvas>
+
+      <section class="brand" aria-label="Squarcraft">
+        <p class="eyebrow">ALPHA · MONDE SANDBOX</p>
+        <h1>SQUAR<span>CRAFT</span></h1>
+        <p class="tagline">Un petit monde, mille possibilités.</p>
+      </section>
+
+      <section id="welcome" class="panel">
+        <p class="panel-kicker">BIENVENUE, BÂTISSEUR</p>
+        <h2>Le monde est à toi.</h2>
+        <p>Explore ce premier îlot cubique, retire des blocs et construis ta propre aventure.</p>
+        <button id="start-button" type="button">Entrer dans le monde <span>→</span></button>
+        <small>Utilise ZQSD / WASD pour bouger · espace pour sauter</small>
+      </section>
+
+      <div id="crosshair" aria-hidden="true">+</div>
+      <p id="hint">Clic gauche : retirer · clic droit : poser · 1–3 : choisir un bloc · Échap : libérer la souris</p>
+
+      <nav id="hotbar" aria-label="Blocs disponibles">
+        <button class="slot active" data-block="grass" type="button"><kbd>1</kbd><i class="grass"></i><span>Herbe</span></button>
+        <button class="slot" data-block="dirt" type="button"><kbd>2</kbd><i class="dirt"></i><span>Terre</span></button>
+        <button class="slot" data-block="stone" type="button"><kbd>3</kbd><i class="stone"></i><span>Pierre</span></button>
+      </nav>
+    </main>
+
+    <script type="importmap">
+      { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js" } }
+    </script>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
